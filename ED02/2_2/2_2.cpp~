@@ -1,0 +1,32 @@
+/* 
+ * File:   2.1.cpp
+ * Author: joseaugustodemelo
+ *
+ * Created on 10 de Março de 2015, 18:18
+ */
+
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+/*
+ * 
+ */
+
+int main() {
+		double qtdBois, pcoArroba, pesoMedio, total;
+    std::setlocale(LC_ALL, "portuguese");
+    std::cout << "Digite a quantidade de bois que será vendida: ";
+    std::cin >> qtdBois;
+    
+    std::cout << "Digite o preço da arroba: ";
+    std::cin >> pcoArroba;
+    
+    std::cout << "Digite o peso médio dos bois (em arroba): ";
+    std::cin >> pesoMedio;
+    
+    total = qtdBois * pcoArroba * pesoMedio;
+    std::cout << "\n \nO valor total da venda dos bois é: " << total << "\n \n";   
+ return 0;
+}

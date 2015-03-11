@@ -1,0 +1,42 @@
+/* 
+ * File:   3_5.cpp
+ * Author: joseaugustodemelo
+ *
+ * Created on 10 de Março de 2015, 20:18
+ */
+
+#include <cstdlib>
+#include <iostream>
+
+
+using namespace std;
+
+/*
+ * 
+ */
+
+int main() {
+	string nome1, nome2;
+	double nota1, nota2;
+	std::setlocale(LC_ALL, "portuguese");
+
+	std::cout << "----- 1º aluno -----\n";
+	std::cout << "Nome: ";
+	std::cin >> nome1;	
+	std::cout << "Nota: ";
+	std::cin >> nota1;
+
+	std::cout << "----- 2º aluno -----\n";
+	std::cout << "Nome: ";
+	std::cin >> nome2;	
+	std::cout << "Nota: ";
+	std::cin >> nota2;
+
+	if (nota1 > nota2) {
+		std::cout << "\n \n" << nome1 << " obteve a maior nota. \n \n";
+	}else{
+		std::cout << "\n \n" << nome2 << " obteve a maior nota. \n \n";
+	}
+
+	return 0;
+}
