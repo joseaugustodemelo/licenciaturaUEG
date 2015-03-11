@@ -1,0 +1,33 @@
+#include <iostream>
+#include <locale.h>
+using namespace std;
+int main(){
+	string nome;
+	int qtd, i;
+	double pco, totalNota, totalParcial, perc, total;
+	setlocale(LC_ALL, "portuguese");
+	totalNota = 0;
+	for(i = 1; i <= 5; i++){
+		cout << "\n -- Produto "<< i << ": \n";
+		cout << "\n Nome do produto: ";
+		cin >> nome;
+		
+		cout << "\n Quantidade comprada: ";
+		cin >> qtd;
+
+		cout << "\n Preço unitário do produto: ";
+		cin >> pco;
+
+		totalParcial = qtd * pco;
+		totalNota = totalNota + totalParcial;		
+	}	
+
+
+	cout << "\n \nO total da nota é: " << totalNota;	
+	cout << "\n \nInforme o percentual de desconto (sem o símbolo de %): ";
+	cin >> perc;
+
+	total = totalNota - (totalNota * (perc/100));
+	cout << "O total da nota com desconto de " << perc << "% é de: R$" << total << "\n \n";
+	return 0;
+}
